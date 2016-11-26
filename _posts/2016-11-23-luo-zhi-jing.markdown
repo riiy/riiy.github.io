@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: Buddhistic
 title:  "罗织经"
 date:   2016-11-23 22:36:54 +0800
-categories: guwen
+categories: classic
 ---
 
 
