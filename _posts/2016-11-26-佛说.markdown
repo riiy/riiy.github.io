@@ -1,5 +1,5 @@
 ---
-layout: Buddhistic
+layout: posts
 title:  "佛经说"
 date:   2016-11-26 22:36:54 +0800
 categories: classic
