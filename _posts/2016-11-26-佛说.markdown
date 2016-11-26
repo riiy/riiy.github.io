@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 title:  "佛经说"
 date:   2016-11-26 22:36:54 +0800
 categories: classic
@@ -7,3 +7,5 @@ categories: classic
 
 
 ## 轮回六道，一朝为人，身受八苦
+
+众生皆苦
