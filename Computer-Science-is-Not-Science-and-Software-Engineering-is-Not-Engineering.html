@@ -1,0 +1,782 @@
+
+
+<head>
+  <title>Software, Science, and Math</title>
+</head>
+
+<body bgcolor="#f0f0f0">
+<script type='text/javascript' src='/js/header.js'>
+</script>
+
+
+
+
+<body bgcolor=silver background="bg2.gif">
+
+<table border=1 cellpadding=5 cellspacing=0 width=570>
+<tr><td bgcolor="#ffffff">
+
+
+<hr>
+<font face="arial">
+<h2> "Computer Science" is Not Science and
+     "Software Engineering" is Not Engineering
+</h2>
+</font>
+Updated 3/12/2005
+<hr><p>
+
+
+I have been in a lot of "software engineering" debates,
+perhaps too many. It is frustrating that there are heavy
+opinions about the "right way" to make software, but no
+easy way to objectively compare them to settle
+long-standing arguments. I have been pondering and studying
+why this is the case, and think I am finally able to
+articulate an answer.
+<p>
+If the software discipline is "science", then the scientific
+process should be available to settle arguments. But it
+seems to fail. Some suggest that instead it is
+"engineering", not "science". But engineering is nothing
+more than applied science. For example, in engineering,
+bridge designs are tested against reality in the longer run.
+Even in the short run, bridge models can be tested in
+environments that simulate reality. Simulations are a
+short-cut to reality, but still bound to reality if we want
+them to be useful. If a bridge eventually fails, and the
+failure is not a construction or materials flaw, then what
+is left is the engineering of the bridge to blame. <b>An
+engineer's model must be tightly bound to the laws of
+physics and chemistry</b>. The engineer is married to
+the laws whether he/she wants to be or not.
+<p>
+But we don't have this in software designs for the most
+part. We have the requirements, such as what the input
+and output looks like and the run-time constraints which
+dictate the maximum time a given operation is allowed to
+take. But there is much in-between these that is elusive to
+objective metrics.
+
+<div align="center">
+<img src="many_solutions.png" border=0 alt="(many solutions illustration)">
+<br>
+<small>
+There are often many techniques and algorithms <br>
+to produce the same results. However, beyond <br>
+being able to solve it, useful and objective <br>
+metrics to select the "best" solution are lacking. <br>
+("Method" not to be confused with OOP "method" here.)
+</small>
+</div>
+<p>
+
+Most of the techniques and paradigms
+under common debate can usually deliver the
+requirements. This is because they are "Turing
+equivalent", which basically means they are capable of
+implementing any clearly-specified algorithm, given
+enough time and resources. The bottom line is that
+delivering the required results is not a distinguishing
+factor; they can all do it.
+
+<blockquote><small>
+There are some specialties, such as Artificial Intelligence,
+where the answer is not necessarily "fixed". The "answer" is
+judged more or less on a continuous scale. In these situations different
+algorithms are compared and the results are ranked.
+For example, a metric similar to a lab-rat maze test for intelligence testing
+can be performed to evaluate performance.
+However, just because a given algorithm is known to be better,
+this does not tell us if it is the "right" or only possible
+algorithm. It might be the "best known" at a given point in time,
+but not much can be concluded beyond that. As expounded upon later,
+we don't know what we don't know.
+</small></blockquote>
+
+Some options under debate may run slower, but that is
+usually not the key point in debates. Somebody will
+argue that higher developer productivity makes up for the
+slower speed (or need for bigger machines) or that in a
+few decades chips will be fast enough such that it does
+not matter. Developer productivity is possibly another
+metric that is measurable, but is still elusive because
+there too many variables. I will return to productivity
+later because it is indeed an important issue.
+<p>
+So, if physical engineering is really science ("applied
+science" to be more exact), but software design does not
+follow the same pattern, then what <i>is</i> software
+design? Perhaps it is math. Math is not inherently bound
+to the physical world. Some do contentiously argue that it is
+bound because it may not necessarily be valid in hypothetical
+or real
+alternative universe(s) that have rules stranger than we
+can envision, but for practical purposes we can
+generally consider it independent of the known laws of
+physics, nature, biology, etc.
+<p>
+The most useful thing about math is that it can create
+nearly boundless models. These models may reflect the
+known (or expected) laws of nature, or laws that the
+mathematician makes up out of the blue. Math has the
+magical property of being able to create <b>alternative
+universes</b> with alternative realities. The only rule is
+that these models must have an internal consistency: they
+can't contradict their own rules. (Well, maybe they can,
+but they are generally much less useful if they do,
+like a program that always crashes.)
+<p>
+<b>Software is a lot like math</b>, and perhaps <i>is</i> math
+according to some definitions. The fact that we can use
+software to create alternative realities is manifested in the
+gaming world. Games provide entertainment by creating
+virtual realities to reflect actual reality to varying
+degrees but bend reality in hopefully interesting ways.
+A popular example is <a
+href="http://thesims.ea.com/us/">The Sims</a>, which is
+a game that simulates social interaction in society, not
+just physical movements found in typical "action" games.
+<p>
+Most games tend to borrow aspects or laws of the
+physical world. This is because game
+purchasers are more likely to buy something that they can
+relate to in one way or another. But making worlds that
+have little or nothing to do with the physical world are
+also possible. Worlds can be created where anti-gravity is
+plentiful, for example. Things would fall up. Or, time
+could run backward, sideways, bump into other time-
+lines, etc. (I know, I watch too much Star Trek, I admit.)
+<p>
+One could also play with social and economic rules that
+we normally assume are fixed or static. Researchers have
+even evolved simple artificial life-forms using "genetic
+algorithms" in order to experiment with the Darwinian theory of
+natural selection. It involves artificial food, artificial
+energy, artificial sexual and asexual reproduction, etc.
+<b>The only limitation is the imagination of the creator
+of the virtual world</b> (and perhaps the pesky
+limitations of computer resources). As long as they can
+define the rules clearly, they can make a universe that
+follows those rules. They build the rules into software,
+press the "run" button, and then sit back and watch.  If
+you have an urge to <b>play God</b>, software is
+currently the best game in town. Unlike your in-laws or
+baby brother, the computer won't complain about
+your attempt at domination.
+<p>
+This nearly infinite flexibility of software, I have
+concluded, is why objective software design evaluation is
+nearly impossible: <b>there is no objective reality inside
+software</b>.  This is the secret cause of all the debate
+headaches. We might as well be a bunch of loonies in the
+mental hospital arguing over which one of us is the real
+or best Napoleon. The difference is that in cyberspace
+we <i>can</i> all be Napoleon.
+Some have suggested that the reasons
+for lack of objective metrics are because we don't know
+enough yet; that we just haven't learned how or what to
+measure. Instead, the problem is that we can manufacture
+what we "know". Today you are Santa Clause, tomorrow
+Cleopatra. This can be both in a literal sense, such
+as a role-playing game, or a figurative sense, such as
+software organization principles.
+
+<div align="center">
+  <img src="dream1.jpg" border=0 alt="dreams">
+</div>
+
+In software design there are many possible different
+design paths to provide the correct answer. But <b>if there
+are many solutions to the same problem, which one is
+"better"?</b>
+One possible answer is, "maybe it does not matter". As
+long as the software takes the input and produces the
+right output, then why care how it works? If a black box
+works, then why worry about how the innards work?
+<p>
+One of the reason the innards do matter is because
+different programmers have to maintain (fix or change)
+software code made by others. Using our God analogy, if
+God goes on vacation or retires, then his replacement
+needs to know how the world works in order to keep it
+running. Real gods may have infinite comprehension
+skills such that they can quickly figure it all out, but
+humans have built-in comprehension limitations. It costs
+us time and money to figure out how something works.
+<p>
+Thus, it is nice to have conventions that make it easier for
+person A to understand the work of person B. But the
+next logical follow-up question is whether some
+conventions are inherently "better" than others.
+Conventions alone may help with communication, but
+are all conventions created equal?
+<p>
+Since these conventions are related to communication,
+we must know more about the communication process in
+humans to answer the "better" question. But this seems
+inherently tied to psychology. If our answers depend on
+knowledge of human psychology, then we cannot yet
+claim we have objective tools to compare conventions
+because psychology by definition is about subjectivity.
+Plus, psychology is still an immature field of study
+compared to say physics.
+Further, every brain is
+different. A truth or pattern found in brain A may
+not necessarily also be in brain B.
+<p>
+Maybe when the human brain is finally fully decoded and
+we understand how it works in detail, then Computer "Science" will
+graduate into a hard science. Further, there has not been
+sufficient cooperation between psychology researchers
+and software researchers. Most psychology research is
+geared toward curing or reducing "big" problems, such as
+extreme depression, schizophrenia, etc. Barring finding a
+buried treasure, that is where most of the research effort
+understandably goes. "Industrial psychology" will only
+receive pocket change in comparison, but it will probably
+take much more than that to answer the big questions.
+
+<blockquote><small>
+Ironically, if we knew enough about brains to answer
+such questions, we could probably use such
+knowledge to build electronic
+versions and make the need for human programming
+mostly obsolete. It is true that the first models
+will probably fill a room, but based on past
+patterns it wouldn't take long to shrink
+the technology and mass manufacture it.
+</small></blockquote>
+
+Now we come back to programmer productivity, which is
+the second reason to be concerned with the innards of our
+black box. If virtual words can be built, changed, and
+debugged faster, then companies can save money and
+hopefully make the economy more efficient. Thus,
+focusing on productivity techniques is clearly a useful
+endeavor.
+<p>
+The problem is that there does not seem to be many
+studies done in this area. Some claim that the size of code
+corresponds to productivity such that a program with
+2,000 lines or tokens is easier to write and maintain than
+one that is 10,000 lines or tokens. But there are heavy
+debates on both sides about whether size alone translates
+into productivity. For example, Perl code can often be
+written to be small in size, but many find it notoriously
+difficult to read. It also depends on the problem domain.
+Some of the best examples of small code I've ever seen
+are from "collection oriented" languages, such as APL's
+derivatives. However, they were toy problems that are
+hard to extrapolate into many real-world situations.
+<p>
+There are just too few good direct studies on
+productivity. For example, researchers could lock a
+bunch of programmers in different rooms with the same
+specification. Each room would use a different language or
+paradigm and we then see who finishes first. However,
+there are complications to this. Code that runs is not
+necessarily code that makes for easy maintenance, and
+many languages and paradigms are allegedly geared to
+optimize maintenance, not initial product delivery. We
+can't keep the test subjects sequestered for years on end
+just to test long-term maintainability. No viable company
+or government is going to allow this with real projects.
+<p>
+My personal observation in combination with bits of
+Edward Yourdon's <a href="oopbad.htm#cult">studies
+suggest</a> that the paradigm or language that a given
+developer is most comfortable with is the one that makes
+them the most productive. This would mean that to get
+optimum productivity, hire a bunch of like-minded
+developers who are fanatics of a given language or tool.
+<p>
+The bottom line is that empirical science is sorely lacking
+in our field. If that's the case, then <b>what is in all those
+volumes of "computer science" books that are
+available?</b> They gotta be writing about something in
+all those since they are not blank pages.
+<p>
+There are various techniques, idioms, tools, etc.
+commonly used in software, and most of the academic
+writings seem to be about these. Examples include:
+<p>
+<ul>
+<li> Boolean Algebra
+<li> Object Oriented Programming
+<li> Data Structures (lists, sets, queues, stacks, etc.)
+<li> Algorithms (sorting, searching, traversing, etc.)
+<li> Relational Theory
+<li> Set Theory
+<li> Type Theory
+</ul>
+<p>
+But are these concepts "science"? Let's explore one of the
+simpler ones: Boolean algebra. Boolean algebra is a
+mathematical idiom that deals with Boolean operands and
+operators. Operators commonly used are AND, OR, and
+NOT. This is not science though, it is <b>math</b>.
+<p>
+But almost everybody agrees that it is a useful math.
+About the only widely-used competitor is 3-value logic,
+which uses a 'nil' or 'null' in addition to the Boolean
+operators. Many RDBMS use this to deal with null's.  But
+3-value logic is still a close cousin to Boolean algebra.
+<p>
+<blockquote><small>Note that the hardware may require
+Boolean states, but the software does not necessarily also
+need it. Programming languages running on Boolean
+hardware can emulate the alternatives, such as 3-value-
+logic, perfectly well. A match between software and
+hardware may result in speed improvements, but
+otherwise they are independent issues. Also note that the
+use of null in RDBMS is controversial among relational
+guru circles.</small></blockquote>
+<p>
+While it may be theoretically possible to develop
+software based on something besides Boolean algebra
+and its derivatives, most would agree it is difficult. This
+is partly because nobody knows about any alternatives
+that they can relate to. Seven-value logic may also be able to
+produce Turing-complete languages,
+but only extreme oddballs would want to use
+it. It is easy to win a contest when there are no viable
+contenders. However, in other areas there are viable
+alternatives that tend to compete with each other.
+Relational and OOP are one <a
+href="oorelndx.htm">example</a>. If there are
+competitors, then we need the rigor of the scientific method.
+Anecdotal evidence is not enough. It often conflicts and
+is difficult to verify.
+<p>
+Boolean algebra is still math, not science. If we want to
+turn the issue into a science issue we need to turn it into
+an empirical claim, such as "Boolean algebra makes code
+shorter than Brand X". But, shorter code is not
+necessarily "better" code, as described above.
+Somebody could perhaps be
+just as productive with longer code if it offers other
+benefits.  Let's review some of the metrics kicked around
+so far:
+<p>
+<ul>
+<li><b>Performance</b> - How fast the program runs
+<li><b>Productivity</b> - How fast a programmer can
+create and/or maintain a program
+<li><b>Consistency</b> - Consistency allegedly results
+in better inter-programmer communication and simplifies
+training.
+<li><b>Code Volume</b> - Less code allegedly makes
+code reading and editing easier.
+</ul>
+<p>
+This list may not be exhaustive or perfect. However, let's
+not dwell on finding perfect metrics here. It serves
+mostly as an example of the kinds of things that need to
+be measured in order to turn software issues into
+"science".
+<p>
+If you look at the "computer science" (CS) literature, you
+don't see such issues addressed often. Only the first one
+(performance) seems to have a fairly large body of
+written knowledge that implies it is "science". For
+example, in the 1970's much was written on searching
+and sorting algorithms and their performance using
+"Big-O" notation. But <b>beyond performance there is a huge
+void.</b>
+<p>
+Most of the CS literature fits the pattern found in a typical book
+or chapter on Boolean algebra. Generally this is the order and
+nature of the presentation:
+<p>
+<ol>
+<li> Givens - lay out base idioms or assumptions
+<li> Play around with those idioms and assumptions
+to create a math or notation
+<li> Show (somewhat) practical examples using the new
+notation or math
+<li> Introduce or reference related or derived topics
+</ol>
+<p>
+A Boolean algebra book would describe the basic
+operators and operands, and introduce more complex
+operators that are based on the simpler ones. For
+example, it might show how "XOR" and "EQV" can be
+made with the root operands of AND, OR, and NOT.
+(Actually only one is needed for the base: "NAND". All
+the rest can come from this alone).
+<p>
+Then such a book may introduce practical examples, such
+as the field of formal logic and computer algorithms.
+Finally, it might suggest further topics, such as
+3-valued-logic (mentioned above) and maybe introduce
+or give references to Relational algebra
+and set theory. These make use of Boolean algebra also.
+<p>
+This may be all interesting stuff, but it is <b>not
+science</b>. It is not necessarily bound to the physical or "real"
+world. The practical examples section is suggestions, not
+evidence. Rarely is it compared to alternatives outside of
+performance.
+
+<blockquote><small>
+In a few cases where comparisons to alternatives
+are made, often only the down-sides of the alternative
+are given, and not the up-sides. For example, some books
+show patterns of change that favor the author's pet paradigm
+or language, but conveniently ignore change patterns that don't
+favor it. Good comparisons
+have to be thorough and should try to get both
+"sides" of the story, ideally letting experts
+and/or proponents of both sides comment on
+each comparison item. The problem is that a
+good comparison alone would probably fill a large
+book itself. And, such comparisons often end up
+relying on subjective psychological factors in the end anyhow.
+"Slam dunk" evidence is rarely uncovered. Objective silver
+bullets are rare.
+</small></blockquote>
+
+Remember "imaginary numbers" from algebra? You
+could do funky stuff with them like take the square root
+of negative nine. Imaginary numbers are generally
+useless for the physical world that we experience.
+However, they turned out to be very useful in the field of
+electronics. More specifically, they had <b>predictive
+power</b> in the field of electronics. Using imaginary
+number math, one can predict behavior of electrons and
+the accuracy of such predictions in models can be measured.
+<p>
+One could argue that Boolean algebra (BA) also has
+predictive power, but it is weaker kind of prediction.
+Computer circuits use Boolean as their underlying
+language, so BA is certainly useful there. However, when
+we get outside of hardware, the connection to the real
+world is a bit more nebulous.
+<p>
+One could argue within a business postal tracking
+application that a package is either delivered on-time or
+not. It cannot be "half" delivered on-time. At least we
+don't represent it that way. Quantum mechanics tells us
+that it may be impossible to measure the exact location of
+a given package while it is moving. We can measure
+a package's position at rest, but cannot accurately measure <i>when</i>
+it came to rest. Thus, in reality it is
+not Boolean. The Boolean-ness that we use is an
+abstraction that we as humans place over our view of the
+world. It is an <b>imperfect abstraction</b>, but good
+enough for most uses. It can in some ways be compared
+to Newtonian physics. Relatively and quantum physics
+have proven more accurate than Newtonian's
+abstractions. However, Newtonian physics has proven a
+"good enough" idiom for the vast majority of uses. BA
+may be the same: A <b>useful lie</b>.
+<p>
+There is kind of a chick-or-egg question about whether
+BA influenced our thinking by "leaking" into our
+education system, or the other way around. Some remote
+tribes have been found that don't appear to view time as
+linear. Our linear view may be shaped by our idioms,
+such as clocks and calendars. Boolean algebra may have
+done something similar directly or indirectly.
+<p>
+As we move up the "complexity ladder" of our idioms,
+say to Relational algebra, then a connection to the real
+world is even murkier. Many, including me, suggest
+relational makes a great building block, yet some would
+rather use OOP instead and do all processing and data
+manipulation through behavioral class interfaces only.
+(Some have argued that OO and relational are really
+orthogonal, but I don't agree. Perhaps that is a nice topic
+for another month.)
+<p>
+All that CS writing and very little of it gives any useful,
+objective tools to answer "which is better?". Because of
+the Turing Complete rule (described above), the
+predictive power is not an issue: they can all deliver the
+correct answer. It is like being a music or movie producer:
+suggested and recommended songs and plots are plentiful. Everybody
+and their dog gives you samples and ideas. The hard
+part is narrowing them down so that one is not overwhelmed
+with work and choices.
+<p>
+Even simple things are often hard to pin down. For
+example, nobody has objectively proven that structured
+programming is better than "GO TO" statements, yet
+very few programmers would want to return to goto's
+glory days. After many years of trying to discover
+a describable reason, I have concluded that my
+own distaste for goto's comes from lack of
+inter-developer consistency and lack of flow-control visual
+cues. Indentation of blocks supplies easier-to-digest
+visual information to the brain that goto code does not. (I
+was forced to use goto's soon out of college because the
+company did not want to pay for compiler upgrades,
+living with the older 60's version instead.)
+<p>
+But, I don't yet know how to measure "consistency" in
+flow-control. If it was an issue in a debate, I could not
+claim I have objective evidence. Maybe there are
+conventions and patterns to goto's that were simply not
+documented. And the second one, visual cues, relates to
+the psychology of perception. Maybe a fancy goto-based
+code editor could automatically draw lines between goto
+branch points to also give visual cues. Further, some have
+suggested that goto's have been partially resurrected in
+the form of the try/catch blocks that are currently in style
+in many languages. Thus, the goto idiom may not be
+totally gone after all. (I also tend to have some
+complaints about try/catch blocks and how they are used,
+but that is perhaps another month's topic.)
+<p>
+The bottom line is that as things now stand, Computer
+Science is not science and Software Engineering is not
+engineering.
+<p>
+Don't get me wrong, <b>I am not suggesting those works
+are all useless</b>. Not being science or engineering
+does not automatically make them useless. My complaint
+is mostly that they are mislabeled and that leaving them
+mislabeled is misleading and perhaps intellectually
+dishonest.
+<p>
+They are idioms, and idioms make good starting points,
+even if there are too many choices with no objective way
+to compare. Going back to our god analogy, without
+some other universes to compare to, <b>it is hard to
+create a universe from scratch</b>. I don't know of a lot
+of games that use non-Newtonian physics as their base
+(although they may occasionally violate or stretch
+Newton's laws for effect). Even though it may not be
+hard to imagine stuff way beyond what we are familiar
+with, it is harder to make it consistent and work together.
+An LSD trip may perhaps be cool (they say), but it is
+hard to get much useful work done there.
+<p>
+In some Star Trek episodes the orbiting ship was unable
+to communicate with the away team on the ground
+because of some "interference field" around the planet or
+landing area. However, the ship was still able to fire their
+giant "phaser" ray to the surface. If they are able to fire a
+ray, then they could in theory use the ray to send a
+Morse-code or binary message. For example, "SOS" in Morse
+would be "blast blast blast, blaaaaast blaaaaast blaaaaast,
+blast blast blast". Phaser pistol blasts from the surface
+should similarly show up on ship sensors. <!-- A ship's blast would
+be detectable even deep under-ground. Surely their tricorders can
+detect seismic rumbles from such blasts (although
+communication might be one-way that deep). -->
+<p>
+Inconsistencies like this may not matter much on scripted
+TV, but if somebody creates a world with such
+contradictory rules and tries to "run" it, like one does
+with The Sims (but perhaps more advanced), then the
+inconsistencies start to bite. In the case of our Trek
+simulation, once characters learn they can send Morse-code
+with weapons, the plots might start to get boring
+and predictable. As a virtual god, we won't like the world
+that we created. It does not have the desired output
+(entertaining plots in this example).
+<p>
+If we don't want to wrestle with such issues, we might be
+better off using a known idiom, such as the American
+wild west, to avoid having unexpected results. The wild west
+was real and so we know that nothing really odd is
+going to happen as long as we stick to its rules. Neither
+the Cherokee nor cowboys are going to build an ultimate
+weapon and wipe out the continent in a big blast, for
+example (at least not for a few decades of simulated
+time).
+<p>
+This is similar to the purpose of the CS idioms we talked
+about. They have been road-tested. Any major
+inconsistencies or problems would have already been
+discovered by now, and smaller ones get incrementally
+fixed over time, or at least better understood so that
+workarounds are documented. Maybe there are
+revolutionary idioms that we have yet to discover that
+provide new and different ways to get the answer. But at
+this point we don't know and can't tell.
+<p>
+But "wait!" you say, "isn't road-testing a scientific
+process?" Outside of producing the correct output, most
+of the "testing" is still within our minds. Attempted
+objectivity solutions just keep
+bringing us back to our minds like an amusement park
+maze with no exits.  We might
+perhaps be able to test that one has learned how to use an
+idiom to some extent, but that does not necessarily say if
+it is the best idiom let alone the best possible idiom.
+<p>
+If an
+idiom does not work out, we cannot tell if it is because
+the idiom user does not "get it", or some other issue. Not
+"getting it" may indicate either a bad user or a bad idiom.
+An idiom that requires knowledge of quantum physics
+just to add two numbers is probably not going to be very
+popular even if it produces the correct answer. Nor do
+we know if an apparently faulty idiom is repairable. Just
+because we don't know how to repair it does not necessarily
+mean it is absolutely not repairable.
+There may be an easy
+tweak that we just have yet to stumble upon. <b>We just don't know
+what we don't know.</b> This might seem like an obvious
+statement, but it has huge ramifications.
+<p>
+Using our Trek analogy, maybe there are ways to fix the
+Trek universe such that the away team really can be
+frequently cut off from the ship to keep the plots
+interesting. But the first tries will probably introduce
+other inconsistencies or unexpected side-effects. If you
+want a predictable or manageable virtual world, then it is
+easier to copy either familiar worlds or ideas from familiar
+worlds, such as the wild west. The devil you know is
+often better (or at least more comfortable)
+than the one you don't know. Those CS
+books are our known devils.
+<p>
+If one can perfect a new idiom by working out the bugs
+and oddities or better understanding it, then it can enter
+into the realm of useful idioms to choose from. It
+provides us with more options to use in our virtual
+worlds. Variety may also allow more people to
+participate in world-building because there is a greater
+chance that an idiom can be found to match a given
+person's personality and cognitive approach.
+<p>
+The GUI is an example of this. It allowed more people to
+learn and use computers because it presents a virtual
+interface comparable to physical buttons and physical
+paper forms and folders that most people are familiar
+with. GUI's are not necessary to have working software,
+and some could argue that they require more labor
+than a well-tuned character-based interface, but
+many people just voted them more comforting because
+GUI's simulate a familiar idiom. Who knows, maybe <i>The Sims</i>
+will someday replace GUI's as the preferred interface. Houses
+could be folders and people be files. I'm sure Sims fans
+can dream up all kinds of OS and office
+application analogies (and probably
+some cruel Microsoft jokes).
+
+<a name="spread"></a>
+<p>
+On the programming front, I have seen spreadsheet idioms allow
+accountants and clerks to become amateur programmers.
+Lotus 1-2-3 allowed one to use existing spreadsheet
+idioms of reference-able cells, menus, and sheets to form
+programming idioms. For example, instead of a go-to
+programming statement with labels, in Lotus you could
+use a cell reference instead. (I can't say I found their
+programs very maintainable myself, but it was still an
+interesting phenomenon.) Commands were mostly just menu
+keystrokes based on the character-based interface. Here
+is a rough example with altered syntax and command names
+for illustration purposes: <pre>
+          |          A             |       B
+          |------------------------------------ ...
+        1 | ifGoto(c5 > 7, a3)     |
+        2 | menuKey("AXg6&lt;enter&gt;") |
+        3 | set(c9, "45.0")        |
+        4 | set(e7, c9)            |
+        5 | ...etc...              |
+
+</pre>
+Assuming the program starts at cell A1, this is how
+to interpret the example:
+<ul>
+<li> Cell A1 - If the value in cell c5 is greater than
+  seven, then go to cell a3 (skipping over a2),
+  else continue to next cell. (This
+  is basically a Fortran-like IF...GOTO idiom.)
+<p>
+<li> Cell A2 - Select item "A" from the menu, then "X" in the
+     resulting submenu. Option "X" results in an input prompt to
+     enter a cell reference, which is
+     "g6" here. "&lt;enter&gt;"
+     emulates the Enter key.
+     Basically, the MenuKey function just sends virtual key-strokes
+     as if you were typing those very same letters.
+     You don't need separate functions for each command because
+     they are already in the menu. A "recorder" feature could even
+     record your keystrokes and create the string for you.
+<p>
+<li> Cell A3 - This Set command simply sets the value of cell c9 to the
+     value "45.0".
+<p>
+<li> Cell A4 - Copy the value of cell c9 to e7.
+</ul>
+<p>
+This approach provides a Turing-complete language that has access to
+any cell and any feature found in the menus mostly <b>by
+echoing how the user would do it manually</b>. It
+also uses cells instead of variables so that the user
+does not have to learn about "variables" in the sense
+that "regular" programmers do. It is a grand
+example of <b>concept reuse</b>.
+<p>
+Microsoft's spreadsheet never
+shared the same ability among accountants and clerks
+because it used Visual Basic statements and variables
+instead of cells
+and menu keystroke echoing.
+In other words, it did not leverage ideas from the
+familiar world of manual spreadsheet usage.
+
+<blockquote><small>
+Even though Microsoft Excel programming was less
+approachable, Microsoft still "won" the spreadsheet
+war for other reasons. First off, they were
+better priced at the time, partly because of
+product bundling deals. Second, they added more
+features that reduced the need for direct programming.
+This made the product more appealing to user who
+had no interest in programming.
+Third, Lotus was late transitioning from the character
+world to the GUI world. The simplicity of the "macro"
+learning depended heavily on character UI
+conventions. It is harder to represent mouse equivalents.
+Forth, Lotus tended to
+have annoying memory problems. But these did not matter
+much to Lotus experts. Once users learned
+macro programming they often didn't want to convert
+to Microsoft. However, they were usually outvoted.
+
+</small></blockquote>
+
+One could perhaps argue that even though the spreadsheet
+idioms make learning programming easier for manual spreadsheet
+users, that by itself does not make the spreadsheet-centric
+programming approach "better", once learning curves are factored out.
+But everybody has a learning curve. It is probably a
+very rare programmer who can truly master all known paradigms
+in a life-time (or until they are forced into management).
+Sure, one can learn all major paradigms,
+but perfecting them all is a different matter. For the
+majority of programmers, it may make more economic sense to
+master one or few paradigms rather than learn many to a
+"good enough" level. In the end, our minds are still the
+primary factor to weigh. The mind is
+where both the power and limits of software are found,
+not the outside world.
+<p>
+<!-- [hide] Perhaps they should rename Computer Science and
+Software Engineering to "Virtual World Management
+Techniques".  In the meantime, your homework
+assignment is to find alternatives to 3-item silverware
+and chopsticks as eating utensils. And, no magnetic
+spoons; Sci-Fi already discovered that idiom. -->
+
+
+
+
+
+
+<hr>
+
+</td></tr></table>
+<p>
+
+
+
+
