@@ -296,6 +296,7 @@ Spark在JVM上运行，需要Java SDK（软件开发工具包的简称）而不�
     ```
 
 ## 安装Spark
+
 去Spark的下载页面下载Spark。
 Spark的下载页面提供多种较早版本的Spark。我们要选择最新的版本，支持Hadoop2.6或者更易的版本。
 对于Hadoop 2.6和更高版本,安装Spark的最简单的方法是使用预构建的Spark包，而不是从源代码构建它，然后将文件移动到目录~/spark根目录下。
@@ -307,13 +308,17 @@ wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.1-bin-hadoop2.7.tgz
 tar -xf spark-2.0.1-bin-hadoop2.7.tgz
 mv spark-* ~/spark
 ```
+
 使用以下命令运行Spark Python解释器
+
 ```
 # run spark
 cd  ~/spark
 ./bin/pyspark
 ```
+
 你会看到：
+
 ```
 Welcome to
       ____              __
@@ -325,13 +330,16 @@ Welcome to
 Using Python version 2.7.12 (default, Jul  2 2016 17:42:40)
 SparkSession available as 'spark'.
 ```
+
 解释器已经给我们提供了一个Spark context对象，运行下面命令可以看到结果：
+
 ```
 >>> print(sc)
 <pyspark.context.SparkContext   object  at  0x7f34b61c4e50>
 ```
 
 ## 使用Jupyter Notebook
+
 Jupyter比终端有更友好的用户界面，你可以使用下面命令启动Jupyter Notebook：
 
 ```
