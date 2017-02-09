@@ -42,7 +42,7 @@ Python是一种深受学术和科学社区偏爱的语言。Python已经开发�
 
 > Data Intensive App Framework
 
-![Data Intensive App Framework](images/data_intensive_app_framework.png)
+![Data Intensive App Framework](/images/data_intensive_app_framework.png)
 
 
 
@@ -82,7 +82,7 @@ Python是一种深受学术和科学社区偏爱的语言。Python已经开发�
 
 
 
-![Data Integration](images/Data_integration.png)
+![Data Integration](/images/Data_integration.png)
 
 
 
@@ -116,7 +116,7 @@ Spark允许四种不同的模式进行数据分析和处理，可以被用于：
 
 >下图显示了前面四种处理风格：
 
-![Spark Processing Styles](images/Spark_Processing_Styles.png)
+![Spark Processing Styles](/images/Spark_Processing_Styles.png)
 
 
 
@@ -126,7 +126,7 @@ Spark有三种模式：一个单一模式——单机在一台机器上；两个
 
 > Spark的组成
 
-![Spark Components](images/Spark_Components.png)
+![Spark Components](/images/Spark_Components.png)
 
 
 
@@ -158,7 +158,7 @@ PySpark不是一个转录的版本支持Java的方言Jython的Spark。 PySpark�
 
 > Pyspark Interactive Local and Cluster
 
-![Pyspark Interactive Local and Cluster](images/Pyspark_Local_Cluster.png)
+![Pyspark Interactive Local and Cluster](/images/Pyspark_Local_Cluster.png)
 
 ## 弹性分布式数据集
 
@@ -203,7 +203,7 @@ RDD（弹性分布式数据集）是Spark中的关键组成部分， 数据集�
 >下图说明了RDD转换和操作：
 
 
-![RDD Transfomation and Action](images/RDD_Transfomation_and_Action.png)
+![RDD Transfomation and Action](/images/RDD_Transfomation_and_Action.png)
 
 
 
@@ -238,7 +238,7 @@ Anaconda自带一些最重要的包，如Pandas，Scikit-learn，Blaze，Matplot
 
 
 
-![Anaconda Stack](images/Anaconda_Stack.png)
+![Anaconda Stack](/images/Anaconda_Stack.png)
 
 
 
@@ -263,7 +263,7 @@ Anaconda自带一些最重要的包，如Pandas，Scikit-learn，Blaze，Matplot
 
 
 
-![Spark-Python-virtual-Machine-Environment](images/Spark-Python-virtual-Machine-Environment.png)
+![Spark-Python-virtual-Machine-Environment](/images/Spark-Python-virtual-Machine-Environment.png)
 
 
 
