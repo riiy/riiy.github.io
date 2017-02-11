@@ -6,6 +6,6 @@
 
 但是我们在大部分的软件设计中没有这个。 我们有要求，例如输入和输出看起来像什么以及规定允许给定操作的最大时间的运行时约束。 但是，这些之间有许多是难以捉摸的客观指标。
 
-![Problem-many-method-to-solve](http://blog.onlyus.online/many_solutions.png)
+<ecnter>![Problem-many-method-to-solve](http://blog.onlyus.online/many_solutions.png)</center>
 
 <center>有很多技术和算法产生相同的结果。 但是，超越能够解决它，有用和客观选择“最佳”解决方案的指标缺乏。（“方法”不要与OOP“方法”混淆）。</center>
