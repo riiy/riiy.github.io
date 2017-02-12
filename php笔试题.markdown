@@ -1,4 +1,15 @@
 1. 求$a,$b,$c三个数中的最大值和最小值
+
+```
+function getMaxAndMin($a,$b,$c){
+    $max = $a < $b ? ($b < $c ? $c : $b) : ($a < $c ? $c $a);
+    $min = $a > $b ? ($b > $c ? $c : $b) : ($a > $c ? $c $a);
+    return [
+        'max' => $max,
+        'min' => $min,
+    ];
+}
+```
 2. echo print print_r 的区别
 3. 防止SQL注入漏洞可以用那些函数
 4. 用PHP写出显示客户端IP与服务器IP的代码
