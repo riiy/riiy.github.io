@@ -16,7 +16,7 @@ composer create-project laravel/laravel --prefer-dist .
 ```
 mkdir -p onlyus/helloworld/src
 ```
-![目录结构图](/images/laravel5-package-1.png/)
+![目录结构图](/images/laravel5-package-1.png)
 
 #### 为扩展创建composer.json文件
 
