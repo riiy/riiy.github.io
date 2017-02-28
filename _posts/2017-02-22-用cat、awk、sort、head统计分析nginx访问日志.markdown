@@ -13,24 +13,24 @@
 
 1. 统计每url流量
 
-```
+ ```
 cat access.log | awk '{url=$7; requests[url]++;bytes[url]+=$10} END{for(url in requests){printf("%sKB\t%sKB/req\t%s\t%s\n", bytes[url] / 1024 , bytes[url] /requests[url] / 1024, requests[url], url)}}' | sort -nr | head -n 15
 ```
 
 1. 统计每ua访问
 
-```
+ ```
 cat access.log| awk -F '"' '{ua=$6; requests[ua]++;} END{for(ua in requests){printf("%s\t%s\n",  requests[ua], ua)}}' | sort -nr | head -n 150
 ```
 
 1. 统计每IP访问
 
-```
+ ```
 cat access.log| awk   '{ip=$1; requests[ip]++;} END{for(ip in requests){printf("%s\t%s\n",  requests[ip], ip)}}' | sort -nr | head -n 150
 ```
 
 1. 统计每小时访问
 
-```
+ ```
 cat access.log| awk -F ':'  '{time=$2; requests[time]++;} END{for(time in requests){printf("%s\t%s\n",  requests[time], time)}}' | sort -nr
 ```
