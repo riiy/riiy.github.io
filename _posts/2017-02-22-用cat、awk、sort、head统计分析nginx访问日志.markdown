@@ -34,3 +34,8 @@ cat access.log| awk   '{ip=$1; requests[ip]++;} END{for(ip in requests){printf("
  ```
 cat access.log| awk -F ':'  '{time=$2; requests[time]++;} END{for(time in requests){printf("%s\t%s\n",  requests[time], time)}}' | sort -nr
 ```
+1. 查看某个状态的日志
+
+```
+cat access.log | awk '$9="500"'
+```
