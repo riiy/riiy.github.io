@@ -1,0 +1,13 @@
+> centos6系统默认安装的是python2.6，不升级也能安装ss服务器端。
+
+1. 安装anaconda
+
+2. 使用conda的pip安装ssserv
+
+```
+pip install -i https://pypi.anaconda.org/pypi/simple shadowsocks
+```
+
+1. 客户端使用polipo代理terminal的http_proxy
+
+1. 使用switchOmga浏览器代理
