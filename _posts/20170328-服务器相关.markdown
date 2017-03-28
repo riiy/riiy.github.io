@@ -1,0 +1,12 @@
+1. mount远程服务器smb硬盘
+
+```
+sudo mount -t cifs  //192.168.2.224/zhoubo /mnt/ -o user=zhoubo,uid=bozhou,gid=users
+```
+  > 后面的uid，gid是本地的用户组
+
+1. 简单备份数据库
+
+```
+mysqldump -uzhoubo -p'passowrd'  scores_v2  > scores_v2-`date +%Y%m%d`.sql
+```
