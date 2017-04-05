@@ -10,3 +10,9 @@ sudo mount -t cifs  //192.168.2.224/zhoubo /mnt/ -o user=zhoubo,uid=bozhou,gid=u
 ```
 mysqldump -uzhoubo -p'passowrd'  scores_v2  > scores_v2-`date +%Y%m%d`.sql
 ```
+
+1. scp远程文件夹
+
+```
+scp -r zhoubo@remotehost:/data/ ./
+```
