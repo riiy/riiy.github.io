@@ -1,0 +1,18 @@
+> mysql 有四种日志：error log; slow log; general log; bin log;
+
+```
+slow_query_log = 1
+slow_query_log_file = /var/log/mysql/slow.log
+long_query_time = 10
+log_queries_not_using_indexes = 1
+general_log=ON
+general_log_file=/var/log/mysql/query.log
+log-bin=/var/log/mysql/mysql-bin
+server-id=1
+binlog-do-db=setek_main
+log-error=/var/log/mysqld.log
+```
+binlog又叫二进制日志文件，它会将mysql中所有修改数据库数据的Query以二进制的形式记录到日志文件中,如：create,insert,drop,update等;（对于select操作则不会被记录到binlog里，因为它并没有修改数据库的数据）。
+
+使用/usr/local/mysql/bin/mysqlbinlog /var/log/mysql/mysql-bin.000013 查看 bin-log
+使用mysqlbinlog命令时如果报错，就加上 “--no-defaults”选项
