@@ -1,0 +1,12 @@
+1. 一般方法
+
+```
+echo "select * from employee" | mysql --host=HOST --port=PORT --user=UserName --password=Password DATABASE.SCHEMA > output.csv
+```
+
+2. 自定义格式的csv
+
+```
+echo "select * from users where 1 INTO OUTFILE '/var/lib/mysql-files/out.csv'  FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';"'" | mysql --host=HOST --port=PORT --user=UserName --password=Password 
+```
+ >  use ```SHOW VARIABLES LIKE "secure_file_priv"``` find OUTFILE path; If access denied, use ```GRANT FILE ON *.* TO user``` grant the privilege.
