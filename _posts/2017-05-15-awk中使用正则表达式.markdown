@@ -1,0 +1,126 @@
+### 在 awk 中使用正则表达式
+
+
+比如现在我们有这么一个文件 poetry.txt 
+
+```
+This above all: to thine self be true
+There is nothing either good or bad, but thinking makes it so
+There’s a special providence in the fall of a sparrow
+No matter how dark long, may eventually in the day arrival
+```
+
+使用正则表达式匹配字符串 "There" ，将包含这个字符串的行打印并输出
+```
+$ awk '/There/{print $0}' poetry.txt
+There is nothing either good or bad, but thinking makes it so
+There’s a special providence in the fall of a sparrow
+```
+
+使用正则表达式配一个包含字母 t 和字母 e ，并且 t 和 e 中间只能有任意单个字符的行
+
+```
+$ awk '/t.e/{print $0}' poetry.txt
+There is nothing either good or bad, but thinking makes it so
+There’s a special providence in the fall of a sparrow
+No matter how dark long, may eventually in the day arrival
+```
+
+如果只想匹配单纯的字符串 "t.e"， 那正则表达式就是这样的 /t\.e/ ，用反斜杠来转义 . 符号 因为 . 在正则表达式里面表示任意单个字符。
+
+使用正则表达式来匹配所有以 "The" 字符串开头的行
+
+```
+$ awk '/^The/{print $0}' poetry.txt
+There is nothing either good or bad, but thinking makes it so
+There’s a special providence in the fall of a sparrow
+```
+
+在正则表达式中 ^ 表示以某某字符或者字符串开头。
+
+使用正则表达式来匹配所有以 "true" 字符串结尾的行
+
+```
+$ awk '/true$/{print $0}' poetry.txt
+This above all: to thine self be true
+```
+
+在正则表达式中 $ 表示以某某字符或者字符串结尾。
+
+又一个正则表达式例子如下
+
+```
+$ awk '/m[a]t/{print $0}' poetry.txt
+No matter how dark long, may eventually in the day arrival
+```
+
+上面这个正则表达式 /m[a]t/ 表示匹配包含字符 m ，然后接着后面还要包含中间方括号中表示的单个字符 a ，最后还要包含字符 t 的行，输出结果中只有单词 "matter" 符合这个正则表达式的匹配。因为正则表达式 [a] 方括号中表示匹配里面的任意单个字符。
+
+继续上面的一个新例子如下
+
+```
+$ awk '/^Th[ie]/{print $0}' poetry.txt
+This above all: to thine self be true
+There is nothing either good or bad, but thinking makes it so
+There’s a special providence in the fall of a sparrow
+```
+这个例子中的正则表达式 /^Th[ie]/表示匹配以字符串 "Thi" 或者 "The" 开头的行，正则表达式方括号中表示匹配其中的任意单个字符。
+
+再继续上面的新的用法
+
+```
+$ awk '/s[a-z]/{print $0}' poetry.txt
+This above all: to thine self be true
+There is nothing either good or bad, but thinking makes it so
+There’s a special providence in the fall of a sparrow
+```
+
+正则表达式 /s[a-z]/ 表示匹配包含字符 s 然后后面跟着任意 a 到 z 之间的单个字符的字符串，比如 "se", "so", "sp" 等等。
+
+正则表达式 [] 方括号中还有一些其他用法比如下面这些
+
+[a-zA-Z]  表示匹配小写的 a 到 z 之间的单个字符，或者大写的 A 到 Z 之间的单个字符
+[^a-z]    符号 `^` 在方括号里面表示取反，也就是非的意思，表示匹配任何非 a 到 z 之间的单个字符
+正则表达式中的星号 * 和加号 + 的使用方法
+
+```
+$ awk '/go*d/{print $0}' poetry.txt
+There is nothing either good or bad, but thinking makes it so
+```
+
+上面这个表示匹配包含字符串 "god"，并且中间的字母 "o" 可以出现 0 次或者多次，比如单词 "good" 就符合这个要求。 正则表达式中的 + 和星号原理差不多，只是加号表示任意 1 个或者 1 个以上，也就是必须至少要出现一次。
+
+正则表达式问号 ? 的使用方法
+
+```
+$ awk '/ba?d/{print $0}' poetry.txt
+There is nothing either good or bad, but thinking makes it so
+```
+
+正则表达式中的问号 ? 表示它前面的字符只能出现 0 次 或者 1 次，也就是可以不出现，也可以出现，但如果有出现也只能出现 1 次。
+
+正则表达式中的 {} 花括号用法
+
+```
+$ awk '/go{2}d/{print $0}' poetry.txt
+There is nothing either good or bad, but thinking makes it so
+```
+
+花括号 {} 表示规定它前面的字符必须出现的次数，像上面这个 /go{2}d/ 就表示只匹配字符串 "good"，也就是中间的字母 "o" 必须要出现 2 次。
+
+正则表达式中的花括号还有一些其他的用法如下
+
+```
+/go{2,3}d/    表示字母 "o" 只能可以出现 2 次或者 3 次
+/go{2,10}d/   表示字母 "o" 只能可以出现 2次，3次，4次，5次，6次 ... 一直到 10 次
+/go{2,}d/     表示字母 "o" 必须至少出现 2 次或着 2 次以上
+```
+
+正则表达式中的圆括号的用法
+
+```
+$ awk '/th(in){1}king/{print $0}' poetry.txt
+There is nothing either good or bad, but thinking makes it so
+```
+
+正则表达式中的圆括号表示将多个字符当成一个完整的对象来看待。比如 /th(in){1}king/ 就表示其中字符串 "in" 必须出现 1 次。而如果不加圆括号就变成了 /thin{1}king/ 这个就表示其中字符 "n" 必须出现 1 次。
