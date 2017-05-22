@@ -16,3 +16,6 @@ mysqldump -uzhoubo -p'passowrd'  scores_v2  > scores_v2-`date +%Y%m%d`.sql
 ```
 scp -r zhoubo@remotehost:/data/ ./
 ```
+
+1. nginx 响应体添加数据
+ add_after_body与expires冲突
