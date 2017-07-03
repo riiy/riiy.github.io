@@ -1,3 +1,5 @@
 
 
-pdf下载：[_pdf](_.pdf)
+[pdf下载](/1_.pdf)
+![png](/1_.png)
+
