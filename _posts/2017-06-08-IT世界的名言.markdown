@@ -6,6 +6,7 @@
 2. 人生苦短，我用python。
  > 来源：python之父（Guido van Rossum）
 
+3. if you learn c++11, we are not friend anymore.
 
 ### 工具方面
 
