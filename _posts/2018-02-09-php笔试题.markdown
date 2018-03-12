@@ -1,3 +1,4 @@
+### 呵呵
 1. 求$a,$b,$c三个数中的最大值和最小值
 
 ```
@@ -35,6 +36,7 @@ function getMaxAndMin($a,$b,$c){
 24. 设计一个基于角色的权限管理系统，写出表结构
 25. 请简述对系统构架的理解
 
+### 呵呵
 
 1. 求两个日期的差数
 
@@ -68,25 +70,25 @@ function verifyEmail($email){
 
 > a绳从两头烧，同时b绳从一头烧，当a绳烧尽时，灭掉b绳，同时c绳从两头烧，在c绳烧尽时，b绳从两头烧，结束时即为1小时15分钟
 
-新浪乐居
+### 新浪乐居
 javascript & html & css
 1. 在html代码中设置当前页面编码为UTF8
 2. 获取页面中所有img标签的个数
 3. 在页面中写入播放音频song.ogg文件代码
 4. 设置页面中所有P标签中的字体颜色为黑色，写出css
 5. 在xml文件中的content标签中要加入一段html源码数据$htmlcontent,请写出content标签内容（用￥$htmlcontent变量表示）
-php
+##### php
 1. 检测一个变量是否设置的函数中——？是否为空的函数是——？
 2. 在PHP中，获取客户端IP的变量是？获取当前服务器IP?
 3. 写出昨天的日期代码？（格式2009-09-21）
 4. error_reporting(E_AL)和ini_set('display_errors','ON')的关系
 5. 在当前域名test.com下设置名为testcookie值为yes生存时间1小时的COOKIE
-MYSQL
+##### MYSQL
 3. 查看表a的创建SQL语句
 4. 查看当前所有的链接情况
 5. 修改表a为pre_a
 
-问答
+##### 问答
 1. 使用PHP正则匹配一段内容里的所有sina.com.cn域名及子域名的超链接URL
 2. 用PHP代码实现指定域名www.test.com到IP为202.106.0.20服务器上
 3. 有表A(id, name, adress, status) 表B(id,fid,price,time),b.id为a.id的关联，A,B为一对多关系，请检索出name为test的均价是多少
@@ -97,7 +99,7 @@ MYSQL
 8. 请写出5种以上http协议的状态码及所表示的意义
 
 
-苏得尔
+### 苏得尔
 HTML+CSS+Javascript
 1. 标签上title与alt属性的区别是什么？
 2. CSS引入方式有哪些？link和@import的区别是什么？
