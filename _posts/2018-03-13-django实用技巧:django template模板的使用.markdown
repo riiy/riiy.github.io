@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "django template模板的使用"
-date:   2018年 3月13日 星期二 22时37分34秒 CST
 categories: classic
 ---
 
