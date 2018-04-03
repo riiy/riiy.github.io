@@ -1,0 +1,20 @@
+# 测试sql语句性能
+
+## 子语句
+
+    ```sql
+    select firstname, surname, joindate
+        from cd.members
+        where joindate =
+            (select max(joindate)
+                from cd.members);
+    ```
+
+## 排序取最
+
+    ```sql
+    select firstname, surname, joindate
+        from cd.members
+    order by joindate desc
+    limit 1;
+    ```
