@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
     最酷的工作是coding,最酷的coding是python
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  congminghaoxue
+github_username:  riiy
 
 # Build settings
 markdown: kramdown
