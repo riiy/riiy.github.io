@@ -35,7 +35,7 @@
 
 ## 示例数据库模型
 
-![Database Model ](/images/db_index_example_database_model.png)
+![Database Model ](https://riiy.github.io/images/db_index_example_database_model.png)
 
 我们将使用此模型来解释本文和即将发表的文章中的索引。它旨在存储有关我们图书馆书籍的所有相关数据。 
 
