@@ -1,0 +1,441 @@
+# 只有python3才有的特性
+
+
+## 特性 1: 高级拆包
+
+你已经这样做了：
+``` python
+>>> a, b = range(2)
+>>> a
+0
+>>> b
+1
+```
+现在可以：
+``` python
+>>> a, b, *rest = range(10)
+>>> a
+0
+>>> b
+1
+>>> rest
+[2, 3, 4, 5, 6, 7, 8, 9]
+```
+*rest 可以在任何地方:
+``` python
+>>> a, *rest, b = range(10)
+>>> a
+0
+>>> b
+9
+>>> rest
+[1, 2, 3, 4, 5, 6, 7, 8]
+>>> *rest, b = range(10)
+>>> rest
+[0, 1, 2, 3, 4, 5, 6, 7, 8]
+>>> b
+9
+```
+
+
+取文件中的第一行及最后一行
+``` python
+>>> with open("using_python_to_profit") as f:
+... first, *_, last = f.readlines()
+>>> first
+'Step 1: Use Python 3\n'
+>>> last
+'Step 10: Profit!\n'
+```
+
+重构函数
+``` python
+def f(a, b, *args):
+    pass
+def f(*args):
+    a, b, *args = args
+    
+``` 
+
+## 特性 2: 关键字参数
+
+``` python
+def f(a, b, *args, option=True):
+    pass
+```
+选项来自* args。
+访问它的唯一方法是显式调用f（a，b，option = True）
+如果你不想收集* args，你可以只写一个*。
+
+```python
+def f(a, b, *, option=True):
+    pass
+```
+少了一个参数
+``` python
+# 错误写法
+def sum(a, b, biteme=False):
+    if biteme:
+        shutil.rmtree('/')
+    else:
+        return a + b
+>>> sum(1, 2)
+3
+>>> sum(1, 2, 3) # 没有报错
+``` 
+换个写法
+```python
+def sum(a, b, *, biteme=False):
+ if biteme:
+ shutil.rmtree('/')
+ else:
+ return a + b
+>>> sum(1, 2, 3)
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+TypeError: sum() takes 2 positional arguments but 3 were given
+```
+
+或者，“我重新排序了函数的关键字参数，但是有些隐含地传递的参数要有正确的顺序“
+
+Example:
+``` py
+def maxall(iterable, key=None):
+    """
+    A list of all max items from the iterable
+    """
+    key = key or (lambda x: x)
+    m = max(iterable, key=key)
+    return [i for i in iterable if key(i) == key(m)]
+>>> maxall(['a', 'ab', 'bc'], len)
+['ab', 'bc']
+```
+
+内置max支持 max(a, b, c)
+```py
+def maxall(*args, key=None):
+    """
+    A list of all max items from the iterable
+    """
+    if len(args) == 1:
+        iterable = args[0]
+    else:
+        iterable = args
+    key = key or (lambda x: x)
+    m = max(iterable, key=key)
+    return [i for i in iterable if key(i) == key(m)]
+ ```
+
+在不使用关键字的情况下，会失败。
+```py
+>>> maxall(['a', 'ab', 'ac'], len)
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+File "<stdin>", line 10, in maxall
+TypeError: unorderable types: builtin_function_or_method() > list()
+```
+(实际上在python2中 return ['a', 'ab', 'ac'], 见 特性 6).
+我们用 maxall(iterable, *, key=None) 就不会犯错.
+
+
+可以使API“未来变更”
+Stupid example:
+```py
+def extendto(value, shorter, longer):
+    """
+    Extend list `shorter` to the length of list `longer` with `value`
+    """
+    if len(shorter) > len(longer):
+        raise ValueError('The `shorter` list is longer than the `longer` list')
+    shorter.extend([value]*(len(longer) - len(shorter)))
+>>> a = [1, 2]
+>>> b = [1, 2, 3, 4, 5]
+>>> extendto(10, a, b)
+>>> a
+[1, 2, 10, 10, 10]
+```
+
+在Python 3, 可以这样写
+```py
+def extendto(value, *, shorter=None, longer=None):
+    """
+    Extend list `shorter` to the length of list `longer` with `value`
+    """
+    if shorter is None or longer is None:
+        raise TypeError('`shorter` and `longer` must be specified')
+    if len(shorter) > len(longer):
+        raise ValueError('The `shorter` list is longer than the `longer` list')
+    shorter.extend([value]*(len(longer) - len(shorter)))
+```
+可以这样用 extendto(10, shorter=a, longer=b)
+也可以 extendto(10, longer=b, shorter=a).
+
+
+添加新的关键字参数而不破坏API。
+Python 3在标准库中完成了这项工作。
+例如，os中的函数具有follow_symlinks选项。
+所以你可以使用os.stat（file，follow_symlinks = False）而不是os.lstat。
+如果听起来更冗长，它可以让你做到
+```py
+s = os.stat(file, follow_symlinks=some_condition)
+```
+而不是
+```py
+if some_condition:
+    s = os.stat(file)
+else:
+    s = os.lstat(file)
+```
+但是os.stat（file，some_condition）不起作用。
+让你不要以为它是一个双参数函数。
+
+在Python 2中，你必须使用** kwargs并自己进行处理。
+你的函数顶部有很多丑陋的选项= kwargs.pop（True）。
+不能自我文档化。
+如果您以某种方式编写仅用于Python 3的代码库，我强烈建议您创建所有关键字
+仅限arguments关键字，尤其是表示“options”的关键字参数。
+
+
+## 特性 3: Chained exceptions
+
+1. 情况: 通过except处理一个exception,然后抛出另外一个exception
+```py
+def mycopy(source, dest):
+    try:
+        shutil.copy2(source, dest)
+    except OSError: # We don't have permissions. More on this later
+        raise NotImplementedError("automatic sudo injection")
+```
+2. 问题: 丢失了原来的调用栈
+```py
+>>> mycopy('noway', 'noway2')
+>>> mycopy(1, 2)
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+File "<stdin>", line 5, in mycopy
+NotImplementedError: automatic sudo injection
+```
+> 对于OSError发生了什么我们不知道
+
+3. 方案：Python 3 会显示全部的exceptions链:
+```py3
+mycopy('noway', 'noway2')
+Traceback (most recent call last):
+File "<stdin>", line 3, in mycopy
+File "/Users/anybody/anaconda3/lib/python3.3/shutil.py", line 243, in copy2
+ copyfile(src, dst, follow_symlinks=follow_symlinks)
+File "/Users/anybody/anaconda3/lib/python3.3/shutil.py", line 109, in copyfile
+ with open(src, 'rb') as fsrc:
+PermissionError: [Errno 13] Permission denied: 'noway'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+File "<stdin>", line 5, in mycopy
+NotImplementedError: automatic sudo injection
+```
+
+## 特性 4: 保证OSError子类安全
+
+
+不那么正确的例子（python2n）
+
+> OSError 可以做很多事情 (file not found, is a directory, is not a directory, broken pipe, ...)
+
+```py
+import errno
+def mycopy(source, dest):
+    try:
+        shutil.copy2(source, dest)
+    except OSError as e:
+        if e.errno in [errno.EPERM, errno.EACCES]:
+            raise NotImplementedError("automatic sudo injection")
+    else:
+        raise
+```
+能运行，但很丑
+
+
+Python 3 可以这么做.
+
+```py3
+def mycopy(source, dest):
+    try:
+        shutil.copy2(source, dest)
+    except PermissionError:
+        raise NotImplementedError("automatic sudo injection")
+```
+
+
+## 特性 5: 一切皆是iterator
+
+1. 在python2中也有iterator,(xrange, itertools.izip, dict.itervalues, ...)
+2. Python 3, range, zip, map, dict.values, ... 都是 iterators.
+
+## 特性 6: 不同类型不再能做比较
+
+Python 2
+```py
+>>> max(['one', 2]) # One *is* the loneliest number
+'one'
+>>> 'abc' > 123
+True
+>>> None > all
+False
+
+Python 3:
+```py3
+>>> 'one' > 2
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+TypeError: unorderable types: str() > int()
+```
+> 这在一定程度上减少了bugs
+
+
+## 特性 7: yield from
+Pretty great if you use generators
+Instead of writing
+更优雅的写法：
+```py
+for i in gen():
+    yield i
+```
+可以替换成：
+```py3
+yield from gen()
+```
+
+使用yield很容易把其它类型封装到generator：
+```py
+#Bad
+def dup(n):
+    A = []
+    for i in range(n):
+        A.extend([i, i])
+    return A
+#Good
+def dup(n):
+    for i in range(n):
+        yield i
+        yield i
+#Better
+def dup(n):
+    for i in range(n):
+        yield from [i, i]
+```
+generators的优势：
+1. 一次只计算一个值。 内存影响低（参见上面的范围示例）。
+1. 可以在运行中随时中断。 不必计算所有的值，只计算你需要什么。 
+1. 如果您需要一个列表（例如，用于切片），只需在生成器上调用list（）。
+1. 在yield之间可以保存状态，这就带来了coroutine
+
+## 特性 8: asyncio
+
+使用协程的特性保存生成器的状态来实现异步IO
+```py
+# Taken from Guido's slides from “Tulip: Async I/O for Python 3” by Guido
+# van Rossum, at LinkedIn, Mountain View, Jan 23, 2014
+@coroutine
+def fetch(host, port):
+    r,w = yield from open_connection(host,port)
+    w.write(b'GET /HTTP/1.0\r\n\r\n ')
+    while (yield from r.readline()).decode('latin-1').strip():
+        pass
+    body=yield from r.read()
+    return body
+@coroutine
+def start():
+    data = yield from fetch('python.org', 80)
+    print(data.decode('utf-8'))
+```
+
+
+
+## 特性 9: 标准库
+
+ipaddress
+```py
+>>> ipaddress.ip_address('192.168.0.1')
+IPv4Address('192.168.0.1')
+>>> ipaddress.ip_address('2001:db8::')
+IPv6Address('2001:db8::')
+```
+
+functools.lru_cache
+```py
+@lru_cache(maxsize=32)
+def get_pep(num):
+    'Retrieve text of a Python Enhancement Proposal'
+    resource = 'http://www.python.org/dev/peps/pep-%04d/' % num
+    try:
+        with urllib.request.urlopen(resource) as s:
+            return s.read()
+    except urllib.error.HTTPError:
+        return 'Not Found'
+```
+```py3
+>>> for n in 8, 290, 308, 320, 8, 218, 320, 279, 289, 320, 9991:
+... pep = get_pep(n)
+... print(n, len(pep))
+>>> get_pep.cache_info()
+CacheInfo(hits=3, misses=8, maxsize=32, currsize=8)
+```
+
+enum，Python 3.4 及以上版本
+```py3
+>>> from enum import Enum
+>>> class Color(Enum):
+... red = 1
+... green = 2
+... blue = 3
+>>> class Shape(Enum):
+... square = 2
+... square = 3
+...
+Traceback (most recent call last):
+...
+TypeError: Attempted to reuse key: 'square'
+```
+
+## 特性 10: 支持unicode变量名, 函数类型标记
+unicode变量名
+```py2
+>>> 中国 = "knows Python"
+>>> π = math.pi
+```
+函数类型标记
+```py3
+def f(a: stuff, b: stuff = 2) -> result:
+    pass
+```
+类型标记是python对象的一个属性，除了把标记放入到__annotations__ dictionary外不做任何其它动作，不影响解释速度，不是静态类型。类型标记可以提供给编辑器类型提示用，有兴趣可以了解下mypy项目。
+```py3
+>>> def f(x: int) -> float:
+... pass
+...
+>>> f.__annotations__
+{'return': <class 'float'>, 'x': <class 'int'>}
+```
+
+## 特性 11: Unicode 和 bytes
+1. 在Python 2中，str就像数据bytes一样,还有unicode类型来表示Unicode字符串。
+1. 在Python 3中，str是一个字符串,bytes是bytes, 没有unicode, str字符串是Unicode。
+
+## 特性 12: Matrix Multiplication
+Python 3.5
+```py3
+ >>> a = np.array([[1, 0], [0, 1]])
+ >>> b = np.array([[4, 1], [2, 2]])
+ >>> np.dot(a, b)
+ array([[4, 1],
+ [2, 2]])
+ ``` 
+```py3
+ >>> a = np.array([[1, 0], [0, 1]])
+ >>> b = np.array([[4, 1], [2, 2]])
+ >>> a @ b
+ array([[4, 1],
+ [2, 2]])
+ ```
+> 任何类型可以使用@重载__matul__。
+
