@@ -6,7 +6,7 @@ categories: translate
 ---
 # 远程工作需要避免的七个错误
 
-Clearly, we're biased. But we believe that remote work presents an incredible opportunity for software developers to balance their professional growth with personal freedom. 
+我们固执地相信，远程工作为软件开发者平衡个人成长与自由提供了极好的机会。
 
 The only difficulty is that landing a remote job isn't as simple as submitting a resume/cover letter and hoping for the best. Thousands of developers apply for X-Team's open roles every month, and it's given us a lot of insight into the most common mistakes that pretty much eliminate a developer's chances for being invited to an interview.
 
