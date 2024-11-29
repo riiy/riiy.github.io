@@ -10,16 +10,11 @@ categories: translate
 
 ## 没有专门制定简历和申请信
 
-The number one mistake we see is that remote developers don't tailor their applications to the job they're applying for. They submit a generic resume and a generic cover letter. To a trained hiring manager, it comes across as lazy and impersonal.
-
-When applying for a remote position, you have to demonstrate that you've researched the company. That you understand its culture, its values, and its requirements. So personalize your cover letter. Highlight relevant experiences and relevant skills (important for algorithmic Applicant Tracking Systems too). Show genuine interest in the company's mission.
-
-Yes, it's more work to tailor every application, but it's really the only way to stand a serious chance. Especially in the competitive, global market of the modern world.
+排第一位的问题是远程开发者没有根据所要申请职位制定他们的简历，他们提供的是统一的简历和求职信。这对训练有素的招聘者来说，这透露出他们的懒惰和不专业。申请一个远程职位，你必须表现出你研究过你所申请的公司，你理解他们的文化，价值观和需求。所以定制你的申请信，强调相关的工作经验和技巧（这对算法系统来说很重要），展示对企业需求的兴趣。当然，专门定制每一次申请意味着更多的工作量，但这是能得到真正机遇唯一的方法，特别是在充满竞争的全球市场更是如此。
 
 ## 看重软件技术，过于忽略软技能
 
-Technical skills are really important for any developer role, but we've found that the remote developers who really stand out are those with the best soft skills. We're talking excellent communication, time management, self-discipline, and problem-solving abilities.
-
+对于开发者来说，技术固然重要，但我们发现拥有最好的软技能的开发者更容易胜出。这些技能包括：流利交流、时间管理、自律和问题解决能力。
 Candidates who fail to highlight these skills in their applications or interviews are at a serious disadvantage compared to those who do. Our clients, and remote employers in general, look for candidates who can express themselves effectively and collaborate well in a distributed team. 
 
 So provide examples of how you've managed your time efficiently, how you've solved problems independently, how you set priorities, et cetera. They are indicators of your ability to thrive in a remote environment.
