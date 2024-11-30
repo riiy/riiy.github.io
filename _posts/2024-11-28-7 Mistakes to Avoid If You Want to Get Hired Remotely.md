@@ -14,32 +14,19 @@ categories: translate
 
 ## 看重软件技术，过于忽略软技能
 
-对于开发者来说，技术固然重要，但我们发现拥有最好的软技能的开发者更容易胜出。这些技能包括：流利交流、时间管理、自律和问题解决能力。
-Candidates who fail to highlight these skills in their applications or interviews are at a serious disadvantage compared to those who do. Our clients, and remote employers in general, look for candidates who can express themselves effectively and collaborate well in a distributed team. 
-
-So provide examples of how you've managed your time efficiently, how you've solved problems independently, how you set priorities, et cetera. They are indicators of your ability to thrive in a remote environment.
+对于开发者来说，技术固然重要，但我们发现拥有最好的软技能的开发者更容易胜出。这些技能包括：流利交流、时间管理、自律和问题解决能力。那些在他们面试或申请中没有强调这几样技能的候选者对比他们的竞争对手处于非常严重的不利局面。招聘方需要的候选人通常是那些能够流利地表达他们并且在远程工作团队中能够很好的合作的人。所以，提供一些例子来证明你可以高效管理你的时间，你有能力独自解决问题，你是如何安排轻重缓急各项事务等。这些是你有能力从事远程工作的指标。
 
 ## 没有强调远程工作经验
-If you've worked remotely before, please emphasize it. You may as well, given that you're applying for a remote job. And this doesn't necessarily have to be full-time remote experience. If you've worked remotely as a freelancer, on a remote project, or even on open-source code (remote by its very nature), it demonstrates the self-discipline and adaptability companies are looking for in their remote hires.
-
-In your resume and cover letter, be sure to mention specific remote projects or roles. Detail the skills and tools you used to succeed. Discuss the remote challeng-es you overcame. Explain that you know how to use remote work tools like Slack, Trello, Zoom, Discord. Trust us, familiarity with these tools is not always a given.
+如果以前有远程工作经验，请突出展示出来。你可能因此赢得一个远程工作机会。不必是全职的远程经验，可以是以自由职业者参与了一个远程项目或者开源代码（本质上是行程工作），展示出来的自律和适应性就是雇佣公司所需求的能力。在你的简历和申请信中，确保特别提到 了远程项目和角色。详细说明你成功使用的技能和工具，详谈在远程中解决的具体困难，解释说明在远程工作中用到的工具，相信我，熟悉这些工具加以增加你的申请成功率。
 
 ## 忽视自己的在线状态
-Hiring managers google you. That's just the world we live in today and, from their perspective, it makes sense too. You're free to post whatever you want on social media, but companies are equally free to look at your profiles and decide if it would be better not to hire you based on your "hot takes" and "unpopular opinions." 
-
- It swings the other way too. If you have an up-to-date LinkedIn profile, an active GitHub, and a good-looking portfolio website, hiring managers will be much more inclined to give you the benefit of the doubt and invite you for an interview. Candidates with a consistent and professional online presence are much beloved by companies looking to hire remotely.
+雇佣公司经理会在线搜索你，这就是我们生活的世界，从他们的角度看，这也是合理的。你可以自由的在社交媒体上展示，但雇佣公司同样自由地查看你的简介并根据你的"热门观点"和"不受欢迎的观点"来决定不雇佣你。相反的，如果你及时更新简历，在gihub上非常活跃，并且有一个好看的投资组合网站，雇佣经理会非常高兴给予你一个面试机会。候选人持续如一的专业线上表现对雇佣组织来说是非常受欢迎的，他们也乐于雇佣这样的人才。
  
 ## 没有准备在线面试
-Another surprisingly common mistake if you want to get hired remotely is not preparing properly for online interviews. You've been invited to an interview, which is genuinely the the biggest hurdle. Don't botch it now because you didn't test your equipment beforehand or look as if you've just stepped out of bed.
-
-Ensure that your camera, microphone, and internet connection are working smoothly. Choose a quiet, well-lit space for the interview, free from distractions and background noise. Rehearse answers for the questions you're most likely to get, and demonstrate confidence and professionalism during the interview. Get these things right and you will leave a positive impression during the interview.
+另一个令人吃惊的共同错误是想要远程工作却没有准备线上面试。你被邀请面试，这确实很糟糕。不要因为没有事先准备好你的设备而搞砸，或者看起来像是刚刚起床。确保你的摄像头、麦克风、网络都能正常工作，选择一个安静不被打扰并且没有背景音的空间来面试。排练你可能遇到的问题，在面试过程中展示你的自信和专业精神。这有助于留下积极的印象。
 
 ## 没有表现出文化契合度
-Cultural fit is important when hiring remotely. Many candidates neglect to show how they align with the company's values and culture. Sometimes, they're not even aware of the company's values. You could be the most technically competent developer in the world, but if you're not a good cultural fit, it'll be a hard pass for experienced hiring managers.
-
-During the interview, express your enthusiasm for the company's mission and culture. Share stories or examples that demonstrate your adaptability and ability to thrive in diverse environments. Employers are more likely to hire candidates who they believe will integrate well with the existing team and contribute positively to the company's culture.
+文化契合也非常重要，许多候选者忽视了他们必须迎合公司的价值观和文化。有时，你根本不在意公司的价值观，也许你是世界上技术最为合适的开发者，但如果没有很好的文化契合，这也会被有经验的招聘经理觉查出来，他不会通过你的申请。在面试过程中，对公司的使命和文化展示出你的热情。分享故事和例子来表现你在复杂环境中处理问题的能力。雇主更愿意雇佣他们相信能更好更快融入现有团队并对公司文化有积极贡献的候选人。
 
 ## 没有有效的人脉网络
-Applying for remote jobs is obviously a crucial aspect of getting a remote job, but many developers underestimate the power of networking. A huge amount of roles are filled before they're even advertised, and they're filled because someone knows someone else who they know would be a good fit. 
-
-To network effectively as a remote developer, engage with online communities, attend virtual events, and connect with professionals on LinkedIn. Participate in industry discussions and contribute valuable insights to demonstrate your expertise and passion for your field. Networking is not just about seeking job opportunities; it's about building meaningful relationships that can support your career growth and development over time.
+申请远程工作是最有效的方式，但许多开发者忽视了网络的力量。大量岗位在放出招聘前就被没了，因为他们知道什么人是这岗位的最佳人选。做为远程开发人员，要有效的建立人际网络，参加在线社区，参与虚拟事务，通过社交媒体与专业人士保持联系，参加行业讨论并提出有价值的论点展示出你的专业和热情。社交网络不仅是能提供工作机会，它能建立有意义的关系并随着时间给你的成长提供帮助。
